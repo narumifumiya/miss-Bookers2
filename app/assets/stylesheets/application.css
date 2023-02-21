@@ -19,3 +19,15 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+
+
+
+form {
+  width: 100%;
+}
+
+label {
+  display: block;
+}
+

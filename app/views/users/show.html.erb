@@ -1,4 +1,24 @@
-<h2>Books</h2>
+<div class="user-info">
+  <h2>User info</h2>
+  
+  <div>
+    <%= image_tag @user.get_profile_image(100, 100) %>
+  </div>
+  <table>
+    <tr>
+      <th>name</th>
+      <th><%= @user.name%></th>
+    </tr>
+    <tr>
+      <th>introduction</th>
+      <th><%= @user.introduction%></th>
+    </tr>
+  </table>
+</div>
+
+<div class="books">
+  
+  <h2>Books</h2>
 
 <table>
   <thead>
@@ -21,3 +41,7 @@
   </tr>
   <% end %>
 </table>
+  
+</div>
+
+

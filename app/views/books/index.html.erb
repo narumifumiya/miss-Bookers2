@@ -1,8 +1,6 @@
 <div class="container">
-  <div class="row">
-
-
-    <% if @book.errors.any? %>
+  
+  <% if @book.errors.any? %>
       <%= @book.errors.count%> errors prohibited this obj from being saved:
       <ul>
         <% @book.errors.full_messages.each do |message| %>
@@ -10,7 +8,8 @@
         <% end %>
       </ul>
     <% end %>
-
+    
+  <div class="row">
     <div class="col-md-3">
       <h2>User info</h2>
       

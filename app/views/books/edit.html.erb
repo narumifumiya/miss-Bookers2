@@ -1,14 +1,26 @@
-<h1>EditingBook</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
 
-<%= form_with model: @book do |f| %>
-  <div class="form-box">
-    <label for="inputTitle">Title</label>
-     <%= f.text_field :title, autofocus: true, id:"inputTitle", placeholder:"名前" %>
+      <h1>EditingBook</h1>
+      
+      <%= form_with model: @book do |f| %>
+        <div class="form-group">
+          <label for="inputTitle">Title</label>
+           <%= f.text_field :title, autofocus: true, id:"inputTitle", placeholder:"名前", class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <label for="inputOpinion">Opinion</label>
+         <%= f.text_area :body, autofocus: true, id:"inputOpinion", class: "form-control" %>
+        </div>
+        <%= f.submit "Update Book", class: "btn btn-success" %>
+          
+      <% end %>
+      <div class="mt-3">
+        <%= link_to "Show", book_path(@book) %>
+        |
+        <%= link_to "Back", books_path %>
+      </div> 
+    </div>
   </div>
-  <div class="form-box">
-    <label for="inputOpinion">Opinion</label>
-   <%= f.text_area :body, autofocus: true, id:"Opinion" %>
-  </div>
-  <%= f.submit "Update Book" %>
-    
-<% end %>
+</div>
